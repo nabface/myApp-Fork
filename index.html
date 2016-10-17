@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>my-applyNg</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>	
+
+<body ng-app >
+		<div class="initialModal">
+			<div class="brand">myApp</div>
+
+			<div class="nav">
+				<div class="modalFind">Find<img src="img/magnifier.png"></div>
+				<div class="modalNew">New<img src="img/plus.png"></div>
+				<div class="modalFilter">Filtrer<img src="img/filter.png"></div>
+			</div>
+			
+			<!--<div class="userModal">User</div>
+			<div class="DepenseModal">Dépense</div>-->
+		</div>
+
+		<div class="containerDepenses">
+
+			<div class="modalDepense">
+				<div class="DepenseLeft user">
+					<img src="img/user.png">
+					<p class="userName">Payeur name</p>
+				</div>
+
+				<div class="DepenseRight">
+					<p class="date">20/08/2016</p>
+					<p class="prix">00,00 &euro;</p>
+				</div>
+				<p class="groupName">Groupe : été 2046</p>
+				<p class="description">Description des depenses : alimentaire, transport, hebergement..</p>
+
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+
+			</div>
+
+			<div class="modalDepense">
+				<div class="DepenseLeft user">
+					<img src="img/user.png">
+					<p class="userName">Payeur name</p>
+				</div>
+
+				<div class="DepenseRight">
+					<p class="date">20/08/2016</p>
+					<p class="prix">000,00 &euro;</p>
+				</div>
+				<p class="groupName">Groupe : hiver 2046</p>
+				<p class="description">Description des depenses : transport</p>
+
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+
+			</div>
+
+
+		</div>
+	<!--<input type="text" ng-model="depence"/>
+
+	<div ng-init="users=['usr1','usr2','usr3']">
+		<ul>
+			<li ng-repeat="user in users">
+				{{user | lowercase}}
+			</li>
+		</ul>
+	</div>-->
+		
+
+
+
+
+
+
+
+
+
+
+
+<!-- Calculette
+	<br>
+	<input type="text" ng-model="nbr1"/>
+	<input type="text" ng-model="nbr2"/>
+
+		{{"Somme : " + (nbr1 * 1 + nbr2 * 1)}}
+
+-->
+
+
+
+ <!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>-->
+
+<script src="js/angular.min.js"></script>
+<script type="text/javascript">
+// AutoRun Js element ready //
+   function autorun()
+   {
+    
+   }
+   if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+   else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+   else window.onload = autorun;
+  </script>
+
+</body>
+</html>
