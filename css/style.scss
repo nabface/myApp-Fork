@@ -133,8 +133,10 @@ body{
 				float:left;
 				font-size:0.8em;
 			}
-			.users{
-				@include userSmall;
+			.concern{
+				.users{
+					@include userSmall;
+			}
 			}
 		}
 	}

@@ -111,7 +111,7 @@ body {
       body .containerDepenses .modalDepense .description {
         float: left;
         font-size: 0.8em; }
-      body .containerDepenses .modalDepense .users {
+      body .containerDepenses .modalDepense .concern .users {
         float: left;
         margin: 4px;
         height: 40px;

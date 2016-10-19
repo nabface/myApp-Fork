@@ -25,13 +25,13 @@
 		</div>
 	</div>
 
-	<div class="containerDepenses">
+	<div class="containerDepenses" ng-controller="depensesCtrl">
 
 		<!-- modal depense-->
-		<div class="modalDepense" ng-controller="depensesCtrl"> 
+		<div class="modalDepense" ng-repeat="depense in depenses"> 
 			<div class="DepenseLeft user">
-				<div class="user" ng-repeat="usercolor in users">{{usercolor}}</div>
-				<p class="userName" ng-repeat="depense in depenses">{{depense.Payeur}}</p>
+				<div class="user">{{usercolor}}</div>
+				<p class="userName">{{depense.Payeur}}</p>
 				<div class="status">
 					<div class="stVert"></div>
 				</div>
@@ -39,22 +39,24 @@
 
 			<div class="DepenseRight">
 				<p class="date">20/08/2016</p>
-				<p class="prix" ng-repeat="depense in depenses">{{depense.Montant +" &euro;"}}</p>
+				<p class="prix">{{depense.Montant +" &euro;"}}</p>
 			</div>
-			<p class="groupName" ng-model="usergroup">{{"Groupe: "+ usergroup}}</p>
-			<p class="description" ng-model="Description">{{"Description des depenses : " + Description}}</p>
+			<p class="groupName">{{"Groupe: "+ depense.usergroup}}</p>
+			<p class="description">{{"Description des depenses : " + depense.Description}}</p>
 
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
+			<div class="concern">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+			</div>
 
 		</div>
 		<!-- end modal depense-->
 
 
 
-		<!-- modal depense-->
+		<!-- modal depense
 	 	<div class="modalDepense"> 
 			<div class="DepenseLeft">
 				<div class="userColor"></div>
@@ -77,7 +79,7 @@
 			<img class="users" src="img/user.png">
 
 		</div>
-		<!-- end modal depense-->
+		end modal depense-->
 
 
 
