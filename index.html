@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,80 +13,102 @@
 
 </head>	
 
-<body ng-app >
-		<div class="initialModal">
-			<div class="brand">myApp</div>
+<body ng-app="MyComptaApp">
 
-			<div class="nav">
-				<div class="modalFind">Find<img src="img/magnifier.png"></div>
-				<div class="modalNew">New<img src="img/plus.png"></div>
-				<div class="modalFilter">Filtrer<img src="img/filter.png"></div>
-			</div>
-			
-			<!--<div class="userModal">User</div>
-			<div class="DepenseModal">Dépense</div>-->
+	<div class="initialModal">
+		<div class="brand">myApp</div>
+		<div class="nav">
+			<a href="" class="modalEtat">Situation</a>
+			<a href="" class="modalFind">Recherche</a>
+			<a href="" class="modalNew">Ajouter</a>
+			<a href="" class="modalFilter">Filtrer</a>
 		</div>
+	</div>
 
-		<div class="containerDepenses">
+	<div class="containerDepenses">
 
-			<div class="modalDepense">
-				<div class="DepenseLeft user">
-					<img src="img/user.png">
-					<p class="userName">Payeur name</p>
+		<!-- modal depense-->
+		<div class="modalDepense" ng-controller="depensesCtrl"> 
+			<div class="DepenseLeft user">
+				<div class="user" ng-repeat="usercolor in users">{{usercolor}}</div>
+				<p class="userName" ng-repeat="depense in depenses">{{depense.Payeur}}</p>
+				<div class="status">
+					<div class="stVert"></div>
 				</div>
-
-				<div class="DepenseRight">
-					<p class="date">20/08/2016</p>
-					<p class="prix">00,00 &euro;</p>
-				</div>
-				<p class="groupName">Groupe : été 2046</p>
-				<p class="description">Description des depenses : alimentaire, transport, hebergement..</p>
-
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-
 			</div>
 
-			<div class="modalDepense">
-				<div class="DepenseLeft user">
-					<img src="img/user.png">
-					<p class="userName">Payeur name</p>
-				</div>
-
-				<div class="DepenseRight">
-					<p class="date">20/08/2016</p>
-					<p class="prix">000,00 &euro;</p>
-				</div>
-				<p class="groupName">Groupe : hiver 2046</p>
-				<p class="description">Description des depenses : transport</p>
-
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-
+			<div class="DepenseRight">
+				<p class="date">20/08/2016</p>
+				<p class="prix" ng-repeat="depense in depenses">{{depense.Montant +" &euro;"}}</p>
 			</div>
+			<p class="groupName" ng-model="usergroup">{{"Groupe: "+ usergroup}}</p>
+			<p class="description" ng-model="Description">{{"Description des depenses : " + Description}}</p>
 
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
 
 		</div>
-	<!--<input type="text" ng-model="depence"/>
-
-	<div ng-init="users=['usr1','usr2','usr3']">
-		<ul>
-			<li ng-repeat="user in users">
-				{{user | lowercase}}
-			</li>
-		</ul>
-	</div>-->
-		
+		<!-- end modal depense-->
 
 
 
+		<!-- modal depense-->
+	 	<div class="modalDepense"> 
+			<div class="DepenseLeft">
+				<div class="userColor"></div>
+				<p class="userName">Payeur name</p>
+				<div class="status">
+					<div class="stVert"></div>
+				</div>
+			</div>
+
+			<div class="DepenseRight">
+				<p class="date">20/08/2016</p>
+				<p class="prix">00,00 &euro;</p>
+			</div>
+			<p class="groupName">Groupe : été 2046</p>
+			<p class="description">Description des depenses : alimentaire, transport, hebergement..</p>
+
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
+			<img class="users" src="img/user.png">
+
+		</div>
+		<!-- end modal depense-->
 
 
 
 
-
+<!--		<div class="situation"> Situation
+			<div class="quit">
+				<img class="users" src="img/user.png">
+			</div>
+			<div class="deb">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+			</div>
+			<div class="debiCred">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+			</div>
+			<div class="cred">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+				<img class="users" src="img/user.png">
+			</div>
+		</div> end Situation-->
 
 
 
@@ -99,14 +121,15 @@
 
 -->
 
-
-
- <!-- 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>-->
-
 <script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
 <script type="text/javascript">
+
+
+
+
+
+
 // AutoRun Js element ready //
    function autorun()
    {

@@ -11,82 +11,127 @@
   font-family: 'OpenSans-Bold';
   src: url("../fonts/OpenSans/OpenSans-Bold.ttf"); }
 body {
-  badding: 0;
+  padding: 0;
   margin: 0;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'OpenSans-Light'; }
   body .initialModal {
-    height: auto;
-    width: 60%;
+    height: 70px;
+    width: 50%;
     margin: 0 auto;
-    padding: 1em;
-    background-color: #ff634a;
-    border: 1px solid #ebebeb; }
+    padding: 0 2em 0 2em !important;
+    background-color: #ff634a; }
     body .initialModal .brand {
       color: #fff;
       font-family: 'OpenSans-Semibold';
       font-size: 2em;
+      line-height: 60px;
       display: inline-block; }
     body .initialModal .nav {
       float: right;
-      display: inline-block; }
-      body .initialModal .nav .modalFind, body .initialModal .nav .modalNew, body .initialModal .nav .modalFilter {
+      display: inline-block;
+      margin-top: 5px; }
+      body .initialModal .nav .modalFind, body .initialModal .nav .modalNew, body .initialModal .nav .modalFilter, body .initialModal .nav .modalEtat {
         color: white;
-        font-size: 1.5em;
-        height: auto;
-        width: 100px;
-        padding: 0.5em;
-        display: inline-block; }
-        body .initialModal .nav .modalFind img, body .initialModal .nav .modalNew img, body .initialModal .nav .modalFilter img {
-          margin-bottom: 0;
-          height: 30px;
-          width: 30px;
-          float: right; }
+        font-size: 1.2em;
+        line-height: 40px;
+        text-align: left;
+        text-decoration: none;
+        height: 40px;
+        width: auto;
+        margin: 10px 0.5em 0 0;
+        padding: 0 2em 0 1em;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1.7em;
+        border-left: dotted 1px white; }
+      body .initialModal .nav .modalFind:hover, body .initialModal .nav .modalNew:hover, body .initialModal .nav .modalFilter:hover, body .initialModal .nav .modalEtat:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2); }
+      body .initialModal .nav .modalFilter {
+        background-image: url("../img/filter.png"); }
+      body .initialModal .nav .modalNew {
+        background-image: url("../img/plus.png"); }
+      body .initialModal .nav .modalFind {
+        background-image: url("../img/magnifier.png"); }
+      body .initialModal .nav .modalEtat {
+        background-image: url("../img/piggy-bank.png"); }
   body .containerDepenses {
     height: auto;
     width: 90%;
     margin: 5%; }
     body .containerDepenses .modalDepense {
-      height: 320px;
-      width: 20%;
-      margin: 0.5em;
+      border: 1px solid #ebebeb;
+      height: auto;
+      width: 18.5vw;
+      margin: 0.2em;
       padding: 1.2em;
       background-color: #f8f8f8;
-      display: inline-block;
-      border: 1px solid #ebebeb; }
+      display: inline-block; }
       body .containerDepenses .modalDepense .DepenseLeft {
         float: left; }
-        body .containerDepenses .modalDepense .DepenseLeft img {
-          height: 80px;
-          width: 80px;
+        body .containerDepenses .modalDepense .DepenseLeft .userColor {
+          height: 70px;
+          width: 70px;
           border-radius: 60px;
-          background-color: grey; }
+          background-color: grey;
+          background-image: url(../img/user.png);
+          background-size: cover; }
         body .containerDepenses .modalDepense .DepenseLeft .userName {
-          font-size: 1.1em;
+          font-size: 1em;
           font-family: 'OpenSans-Semibold';
-          margin-top: 0; }
+          margin: 0; }
+        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu, body .containerDepenses .modalDepense .DepenseLeft .status .stVert, body .containerDepenses .modalDepense .DepenseLeft .status .stOrange, body .containerDepenses .modalDepense .DepenseLeft .status .stRouge {
+          height: 5px;
+          width: 40px;
+          display: inline-block;
+          margin-right: 3px; }
+        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu {
+          background-color: blue; }
+        body .containerDepenses .modalDepense .DepenseLeft .status .stVert {
+          background-color: green; }
+        body .containerDepenses .modalDepense .DepenseLeft .status .stOrange {
+          background-color: orange; }
+        body .containerDepenses .modalDepense .DepenseLeft .status .stRouge {
+          background-color: red; }
       body .containerDepenses .modalDepense .DepenseRight {
         text-align: right; }
         body .containerDepenses .modalDepense .DepenseRight .date {
           font-size: 0.8em;
           margin-bottom: 0; }
         body .containerDepenses .modalDepense .DepenseRight .prix {
-          font-size: 2em;
+          font-size: 1.3em;
           margin-top: 0; }
       body .containerDepenses .modalDepense .groupName {
         font-size: 1.2em;
         margin: 0;
         float: left; }
       body .containerDepenses .modalDepense .description {
-        float: left; }
+        float: left;
+        font-size: 0.8em; }
       body .containerDepenses .modalDepense .users {
-        width: 50px;
         float: left;
         margin: 4px;
         height: 40px;
         width: 40px;
         border-radius: 60px;
         background-color: grey; }
+  body .situation .quit, body .situation .deb, body .situation .debiCred, body .situation .cred {
+    border: 1px solid #ebebeb;
+    height: auto;
+    width: 18.5vw;
+    margin: 0.2em;
+    padding: 1.2em;
+    background-color: #f8f8f8;
+    display: inline-block; }
+    body .situation .quit .users, body .situation .deb .users, body .situation .debiCred .users, body .situation .cred .users {
+      float: left;
+      margin: 4px;
+      height: 40px;
+      width: 40px;
+      border-radius: 60px;
+      background-color: grey; }
 
 /*# sourceMappingURL=style.css.map */
