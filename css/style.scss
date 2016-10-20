@@ -71,12 +71,12 @@ body{
 			}
 		}	
 	}
-	.containerDepenses{
+	.containerDepenses,.containerUsers{
 		height:auto;
 		width:90%;
 		margin:5%;
 
-		.modalDepense{
+		.modalDepense,.modalUser{
 			
 			@include modalType;
 

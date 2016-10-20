@@ -31,7 +31,7 @@
 		<div class="modalDepense" ng-repeat="depense in depenses"> 
 			<div class="DepenseLeft user">
 				<div class="user">{{usercolor}}</div>
-				<p class="userName">{{depense.Payeur}}</p>
+				<p class="userName" ng-controller="usersCtrl">{{depense.Payeur}}</p>
 				<div class="status">
 					<div class="stVert"></div>
 				</div>
@@ -53,33 +53,20 @@
 
 		</div>
 		<!-- end modal depense-->
+	</div>
 
 
-
-		<!-- modal depense
-	 	<div class="modalDepense"> 
-			<div class="DepenseLeft">
-				<div class="userColor"></div>
-				<p class="userName">Payeur name</p>
-				<div class="status">
-					<div class="stVert"></div>
-				</div>
-			</div>
-
-			<div class="DepenseRight">
-				<p class="date">20/08/2016</p>
-				<p class="prix">00,00 &euro;</p>
-			</div>
-			<p class="groupName">Groupe : été 2046</p>
-			<p class="description">Description des depenses : alimentaire, transport, hebergement..</p>
-
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
-			<img class="users" src="img/user.png">
-
+	
+	<div class="containerUsers" ng-controller="usersCtrl"> 
+		<!-- modal user-->
+		<div class="modalUser" ng-repeat="user in users">
+			<div class="userColor">{{user.usercolor}}</div>
+			<p class="userName">{{user.username}}</p>
+			<div class="stVert"></div>
+			<p class="groupName">{{"Groupe: "+ user.usergroup}}</p>
 		</div>
-		end modal depense-->
+			<!--end modal users-->
+	</div>
 
 
 
@@ -125,22 +112,5 @@
 
 <script src="js/angular.min.js"></script>
 <script src="js/app.js"></script>
-<script type="text/javascript">
-
-
-
-
-
-
-// AutoRun Js element ready //
-   function autorun()
-   {
-    
-   }
-   if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
-   else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
-   else window.onload = autorun;
-  </script>
-
 </body>
 </html>

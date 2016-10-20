@@ -58,60 +58,60 @@ body {
         background-image: url("../img/magnifier.png"); }
       body .initialModal .nav .modalEtat {
         background-image: url("../img/piggy-bank.png"); }
-  body .containerDepenses {
+  body .containerDepenses, body .containerUsers {
     height: auto;
     width: 90%;
     margin: 5%; }
-    body .containerDepenses .modalDepense {
+    body .containerDepenses .modalDepense, body .containerDepenses .modalUser, body .containerUsers .modalDepense, body .containerUsers .modalUser {
       border: 1px solid #ebebeb;
-      height: auto;
+      min-height: 220px;
       width: 18.5vw;
       margin: 0.2em;
       padding: 1.2em;
       background-color: #f8f8f8;
       display: inline-block; }
-      body .containerDepenses .modalDepense .DepenseLeft {
+      body .containerDepenses .modalDepense .DepenseLeft, body .containerDepenses .modalUser .DepenseLeft, body .containerUsers .modalDepense .DepenseLeft, body .containerUsers .modalUser .DepenseLeft {
         float: left; }
-        body .containerDepenses .modalDepense .DepenseLeft .userColor {
+        body .containerDepenses .modalDepense .DepenseLeft .userColor, body .containerDepenses .modalUser .DepenseLeft .userColor, body .containerUsers .modalDepense .DepenseLeft .userColor, body .containerUsers .modalUser .DepenseLeft .userColor {
           height: 70px;
           width: 70px;
           border-radius: 60px;
           background-color: grey;
           background-image: url(../img/user.png);
           background-size: cover; }
-        body .containerDepenses .modalDepense .DepenseLeft .userName {
+        body .containerDepenses .modalDepense .DepenseLeft .userName, body .containerDepenses .modalUser .DepenseLeft .userName, body .containerUsers .modalDepense .DepenseLeft .userName, body .containerUsers .modalUser .DepenseLeft .userName {
           font-size: 1em;
           font-family: 'OpenSans-Semibold';
           margin: 0; }
-        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu, body .containerDepenses .modalDepense .DepenseLeft .status .stVert, body .containerDepenses .modalDepense .DepenseLeft .status .stOrange, body .containerDepenses .modalDepense .DepenseLeft .status .stRouge {
+        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu, body .containerDepenses .modalDepense .DepenseLeft .status .stVert, body .containerDepenses .modalDepense .DepenseLeft .status .stOrange, body .containerDepenses .modalDepense .DepenseLeft .status .stRouge, body .containerDepenses .modalUser .DepenseLeft .status .stBleu, body .containerDepenses .modalUser .DepenseLeft .status .stVert, body .containerDepenses .modalUser .DepenseLeft .status .stOrange, body .containerDepenses .modalUser .DepenseLeft .status .stRouge, body .containerUsers .modalDepense .DepenseLeft .status .stBleu, body .containerUsers .modalDepense .DepenseLeft .status .stVert, body .containerUsers .modalDepense .DepenseLeft .status .stOrange, body .containerUsers .modalDepense .DepenseLeft .status .stRouge, body .containerUsers .modalUser .DepenseLeft .status .stBleu, body .containerUsers .modalUser .DepenseLeft .status .stVert, body .containerUsers .modalUser .DepenseLeft .status .stOrange, body .containerUsers .modalUser .DepenseLeft .status .stRouge {
           height: 5px;
           width: 40px;
           display: inline-block;
           margin-right: 3px; }
-        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu {
+        body .containerDepenses .modalDepense .DepenseLeft .status .stBleu, body .containerDepenses .modalUser .DepenseLeft .status .stBleu, body .containerUsers .modalDepense .DepenseLeft .status .stBleu, body .containerUsers .modalUser .DepenseLeft .status .stBleu {
           background-color: blue; }
-        body .containerDepenses .modalDepense .DepenseLeft .status .stVert {
+        body .containerDepenses .modalDepense .DepenseLeft .status .stVert, body .containerDepenses .modalUser .DepenseLeft .status .stVert, body .containerUsers .modalDepense .DepenseLeft .status .stVert, body .containerUsers .modalUser .DepenseLeft .status .stVert {
           background-color: green; }
-        body .containerDepenses .modalDepense .DepenseLeft .status .stOrange {
+        body .containerDepenses .modalDepense .DepenseLeft .status .stOrange, body .containerDepenses .modalUser .DepenseLeft .status .stOrange, body .containerUsers .modalDepense .DepenseLeft .status .stOrange, body .containerUsers .modalUser .DepenseLeft .status .stOrange {
           background-color: orange; }
-        body .containerDepenses .modalDepense .DepenseLeft .status .stRouge {
+        body .containerDepenses .modalDepense .DepenseLeft .status .stRouge, body .containerDepenses .modalUser .DepenseLeft .status .stRouge, body .containerUsers .modalDepense .DepenseLeft .status .stRouge, body .containerUsers .modalUser .DepenseLeft .status .stRouge {
           background-color: red; }
-      body .containerDepenses .modalDepense .DepenseRight {
+      body .containerDepenses .modalDepense .DepenseRight, body .containerDepenses .modalUser .DepenseRight, body .containerUsers .modalDepense .DepenseRight, body .containerUsers .modalUser .DepenseRight {
         text-align: right; }
-        body .containerDepenses .modalDepense .DepenseRight .date {
+        body .containerDepenses .modalDepense .DepenseRight .date, body .containerDepenses .modalUser .DepenseRight .date, body .containerUsers .modalDepense .DepenseRight .date, body .containerUsers .modalUser .DepenseRight .date {
           font-size: 0.8em;
           margin-bottom: 0; }
-        body .containerDepenses .modalDepense .DepenseRight .prix {
+        body .containerDepenses .modalDepense .DepenseRight .prix, body .containerDepenses .modalUser .DepenseRight .prix, body .containerUsers .modalDepense .DepenseRight .prix, body .containerUsers .modalUser .DepenseRight .prix {
           font-size: 1.3em;
           margin-top: 0; }
-      body .containerDepenses .modalDepense .groupName {
+      body .containerDepenses .modalDepense .groupName, body .containerDepenses .modalUser .groupName, body .containerUsers .modalDepense .groupName, body .containerUsers .modalUser .groupName {
         font-size: 1.2em;
         margin: 0;
         float: left; }
-      body .containerDepenses .modalDepense .description {
+      body .containerDepenses .modalDepense .description, body .containerDepenses .modalUser .description, body .containerUsers .modalDepense .description, body .containerUsers .modalUser .description {
         float: left;
         font-size: 0.8em; }
-      body .containerDepenses .modalDepense .concern .users {
+      body .containerDepenses .modalDepense .concern .users, body .containerDepenses .modalUser .concern .users, body .containerUsers .modalDepense .concern .users, body .containerUsers .modalUser .concern .users {
         float: left;
         margin: 4px;
         height: 40px;
@@ -120,7 +120,7 @@ body {
         background-color: grey; }
   body .situation .quit, body .situation .deb, body .situation .debiCred, body .situation .cred {
     border: 1px solid #ebebeb;
-    height: auto;
+    min-height: 220px;
     width: 18.5vw;
     margin: 0.2em;
     padding: 1.2em;
