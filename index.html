@@ -14,17 +14,33 @@
 </head>	
 
 <body ng-app="MyComptaApp">
-
-	<div class="initialModal">
+	<div class="initialModal" ng-controller="dislplayNav">
 		<div class="brand">myApp</div>
 		<div class="nav">
+
 			<a href="" class="modalEtat">Situation</a>
-			<a href="" class="modalFind">Recherche</a>
-			<a href="" class="modalNew">Ajouter</a>
-			<a href="" class="modalFilter">Filtrer</a>
+
+			<a href="" class="modalFind"
+			ng-click="showFindFunc()">Recherche</a>
+			<div ng-show="showFind" class="findBox">
+			FINDDDD
+			</div>
+
+			<a href="" class="modalNew"
+			ng-click="showNewFunc()">Ajouter</a>
+			<div ng-show="showNew" class="newBox">
+			AAAAA
+			</div>
+			
+			<a href="" class="modalFilter"
+			ng-click="showFilterFunc()">Filtrer</a>
+			<div ng-show="showFilter" class="filterBox">
+			fffff
+			</div>
+
 		</div>
 	</div>
-
+	
 	<div class="containerDepenses" ng-controller="depensesCtrl">
 
 		<!-- modal depense-->
@@ -70,37 +86,6 @@
 
 
 
-
-<!--		<div class="situation"> Situation
-			<div class="quit">
-				<img class="users" src="img/user.png">
-			</div>
-			<div class="deb">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-			</div>
-			<div class="debiCred">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-			</div>
-			<div class="cred">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-				<img class="users" src="img/user.png">
-			</div>
-		</div> end Situation-->
-
-
-
 <!-- Calculette
 	<br>
 	<input type="text" ng-model="nbr1"/>
@@ -111,6 +96,7 @@
 -->
 
 <script src="js/angular.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

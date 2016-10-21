@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'OpenSans-Light'; }
   body .initialModal {
-    height: 70px;
+    min-height: 70px;
     width: 50%;
     margin: 0 auto;
     padding: 0 2em 0 2em !important;
@@ -58,17 +58,21 @@ body {
         background-image: url("../img/magnifier.png"); }
       body .initialModal .nav .modalEtat {
         background-image: url("../img/piggy-bank.png"); }
+      body .initialModal .nav .filterBox, body .initialModal .nav .newBox, body .initialModal .nav .findBox {
+        padding: 1.2em;
+        border: 1px solid #ebebeb;
+        background-color: #f8f8f8; }
   body .containerDepenses, body .containerUsers {
     height: auto;
     width: 90%;
     margin: 5%; }
     body .containerDepenses .modalDepense, body .containerDepenses .modalUser, body .containerUsers .modalDepense, body .containerUsers .modalUser {
+      padding: 1.2em;
       border: 1px solid #ebebeb;
+      background-color: #f8f8f8;
       min-height: 220px;
       width: 18.5vw;
       margin: 0.2em;
-      padding: 1.2em;
-      background-color: #f8f8f8;
       display: inline-block; }
       body .containerDepenses .modalDepense .DepenseLeft, body .containerDepenses .modalUser .DepenseLeft, body .containerUsers .modalDepense .DepenseLeft, body .containerUsers .modalUser .DepenseLeft {
         float: left; }
@@ -119,12 +123,12 @@ body {
         border-radius: 60px;
         background-color: grey; }
   body .situation .quit, body .situation .deb, body .situation .debiCred, body .situation .cred {
+    padding: 1.2em;
     border: 1px solid #ebebeb;
+    background-color: #f8f8f8;
     min-height: 220px;
     width: 18.5vw;
     margin: 0.2em;
-    padding: 1.2em;
-    background-color: #f8f8f8;
     display: inline-block; }
     body .situation .quit .users, body .situation .deb .users, body .situation .debiCred .users, body .situation .cred .users {
       float: left;

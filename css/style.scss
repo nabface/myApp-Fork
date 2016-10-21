@@ -26,7 +26,7 @@ body{
 	font-family: 'OpenSans-Light';
 
 	.initialModal{
-		height: 70px;
+		min-height: 70px;
 		width : 50%;
 		margin:0 auto;
 		padding: 0 2em 0 2em!important;
@@ -68,6 +68,9 @@ body{
 
 			.modalEtat{
 				background-image: url('../img/piggy-bank.png');
+			}
+			.filterBox,.newBox,.findBox{
+				@include modalFond;
 			}
 		}	
 	}

@@ -1,4 +1,4 @@
-var app = angular.module('MyComptaApp',[]);
+var app = angular.module('MyComptaApp',['ngAnimate']);
 app.controller('usersCtrl', function ($scope,$http){
    $http({
       method:"GET",
@@ -18,17 +18,35 @@ app.controller('depensesCtrl', function ($scope,$http){
    });
 });
 
-//afiche la modale filtrer
-app.controller("filtrerCtr", function($scope){
-    $scope.showContent = true;    
+//afiche les modales de la nav
+app.controller('dislplayNav', function($scope) {
+    $scope.showFilter = false;
+    $scope.showFilterFunc = function() {
+        $scope.showFilter = !$scope.showFilter;
+    }
+
+    $scope.showNew = false;
+    $scope.showNewFunc = function() {
+        $scope.showNew = !$scope.showNew;
+    }
+
+    $scope.showFind = false;
+    $scope.showFindFunc = function() {
+        $scope.showFind = !$scope.showFind;
+    }
+
+
 });
 
+
+
+/*
 //transforme l'id du payeur en username
 app.controller('covertIdCtrl', function ($scope,$http){
    $http({
       method:"GET",
-      url:"json/users.json"
+      url:"json/users.json","json/depenses.json"
    }).then(function(response){
       $scope.name = response.data.records.username;
    });
-});
+});*/
