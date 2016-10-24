@@ -16,10 +16,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'OpenSans-Light'; }
+  body a {
+    text-decoration: none; }
+  body a:hover {
+    text-decoration: none; }
   body .initialModal {
-    min-height: 70px;
-    width: 50%;
-    margin: 0 auto;
+    min-height: 90px;
+    width: 100%;
+    margin: 0;
     padding: 0 2em 0 2em !important;
     background-color: #ff634a; }
     body .initialModal .brand {
@@ -27,12 +31,14 @@ body {
       font-family: 'OpenSans-Semibold';
       font-size: 2em;
       line-height: 60px;
-      display: inline-block; }
-    body .initialModal .nav {
-      float: right;
       display: inline-block;
-      margin-top: 5px; }
-      body .initialModal .nav .modalFind, body .initialModal .nav .modalNew, body .initialModal .nav .modalFilter, body .initialModal .nav .modalEtat {
+      width: 10%; }
+    body .initialModal .nav {
+      right: 40px;
+      display: inline-block;
+      margin-top: 5px;
+      width: 80%; }
+      body .initialModal .nav .modalFind, body .initialModal .nav .modalNew, body .initialModal .nav .modalEtat, body .initialModal .nav .modalConnect {
         color: white;
         font-size: 1.2em;
         line-height: 40px;
@@ -47,18 +53,16 @@ body {
         background-position: right center;
         background-size: 1.7em;
         border-left: dotted 1px white; }
-      body .initialModal .nav .modalFind:hover, body .initialModal .nav .modalNew:hover, body .initialModal .nav .modalFilter:hover, body .initialModal .nav .modalEtat:hover {
+      body .initialModal .nav .modalFind:hover, body .initialModal .nav .modalNew:hover, body .initialModal .nav .modalEtat:hover {
         color: white;
         background-color: rgba(255, 255, 255, 0.2); }
-      body .initialModal .nav .modalFilter {
-        background-image: url("../img/filter.png"); }
       body .initialModal .nav .modalNew {
         background-image: url("../img/plus.png"); }
       body .initialModal .nav .modalFind {
         background-image: url("../img/magnifier.png"); }
       body .initialModal .nav .modalEtat {
         background-image: url("../img/piggy-bank.png"); }
-      body .initialModal .nav .filterBox, body .initialModal .nav .newBox, body .initialModal .nav .findBox {
+      body .initialModal .nav .newBox, body .initialModal .nav .findBox {
         padding: 1.2em;
         border: 1px solid #ebebeb;
         background-color: #f8f8f8; }
@@ -66,6 +70,23 @@ body {
     height: auto;
     width: 90%;
     margin: 5%; }
+    body .containerDepenses .containerFilter, body .containerUsers .containerFilter {
+      color: white;
+      font-size: 1.2em;
+      line-height: 40px;
+      text-align: left;
+      text-decoration: none;
+      height: 40px;
+      width: auto;
+      margin: 10px 0.5em 0 0;
+      padding: 0 2em 0 1em;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 1.7em;
+      border-left: dotted 1px white;
+      width: 100%;
+      color: black; }
     body .containerDepenses .modalDepense, body .containerDepenses .modalUser, body .containerUsers .modalDepense, body .containerUsers .modalUser {
       padding: 1.2em;
       border: 1px solid #ebebeb;
@@ -113,6 +134,7 @@ body {
         margin: 0;
         float: left; }
       body .containerDepenses .modalDepense .description, body .containerDepenses .modalUser .description, body .containerUsers .modalDepense .description, body .containerUsers .modalUser .description {
+        width: 18.5vw;
         float: left;
         font-size: 0.8em; }
       body .containerDepenses .modalDepense .concern .users, body .containerDepenses .modalUser .concern .users, body .containerUsers .modalDepense .concern .users, body .containerUsers .modalUser .concern .users {
@@ -122,6 +144,8 @@ body {
         width: 40px;
         border-radius: 60px;
         background-color: grey; }
+      body .containerDepenses .modalDepense .concern .edit, body .containerDepenses .modalUser .concern .edit, body .containerUsers .modalDepense .concern .edit, body .containerUsers .modalUser .concern .edit {
+        width: 18.5vw; }
   body .situation .quit, body .situation .deb, body .situation .debiCred, body .situation .cred {
     padding: 1.2em;
     border: 1px solid #ebebeb;

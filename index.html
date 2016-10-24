@@ -12,49 +12,92 @@
     <![endif]-->
 
 </head>	
-
-<body ng-app="MyComptaApp">
+<body ng-app="MyComptaApp" ng-controller="usersCtrl">
 	<div class="initialModal" ng-controller="dislplayNav">
 		<div class="brand">myApp</div>
 		<div class="nav">
 
-			<a href="" class="modalEtat">Situation</a>
-
-			<a href="" class="modalFind"
-			ng-click="showFindFunc()">Recherche</a>
-			<div ng-show="showFind" class="findBox">
-			FINDDDD
-			</div>
+			<a href="" class="modalEtat">Situation des comptes</a>
 
 			<a href="" class="modalNew"
 			ng-click="showNewFunc()">Ajouter</a>
 			<div ng-show="showNew" class="newBox">
-			AAAAA
-			</div>
-			
-			<a href="" class="modalFilter"
-			ng-click="showFilterFunc()">Filtrer</a>
-			<div ng-show="showFilter" class="filterBox">
-			fffff
+				<form>
+				  Ajouter un(e):
+				  <select ng-model="myNew">
+				  	<option value="">...</option>
+				    <option value="user">User</option>
+				    <option value="depense">Dépense</option>
+				  </select>
+				</form>
+
+				<div ng-switch="myNew">
+				  <div ng-switch-when="user">
+				    <input type="text" placeholder="user name"></input>
+				    <input type="text" placeholder="user group"></input>
+				    Choisir une couleur:
+				    <select ng-model="">
+					   <option value="">Blue</option>
+					   <option value="">Green</option>
+					</select>
+					<button type="submit">valider</button>
+				  </div>
+
+				  <div ng-switch-when="depense">
+				    <input type="text" placeholder="Date"></input>
+				    <input type="text" placeholder="montant en Euro"></input><br>
+				    Choisir un payeur:
+				    <select ng-model="myNew">
+				    	<option value="">...</option>
+					   <option value="">Golum</option>
+					   <option value="">Ben Ipsum</option>
+					</select>
+				    <input type="text" placeholder="user group"></input><br>
+					<input type="text" placeholder="Concernés"></input>
+					<textarea type="text" placeholder="Concernés"></textarea>
+					<button type="submit">valider</button>
+				  </div>
+
+				</div>
 			</div>
 
+			<a href="" class="modalConnect"
+			ng-click="showFindFunc()">Déconnexion</a>
+			<!--<div ng-show="showFind" class="findBox">
+			</div>-->
+			
+			
+
+		</div>
 		</div>
 	</div>
 	
 	<div class="containerDepenses" ng-controller="depensesCtrl">
 
+		<div class="containerFilter">
+			<div class="modalFilter" ng-click="showFilterFunc()">
+				Filtrer par :	
+				<select ng-model="order">
+					<option value="">...</option>
+				    <option ng-model="monFiltre" value="Date">Date</option>
+				    <option ng-model="monFiltre" value="Payeur">Payeur</option>
+				    <option ng-model="monFiltre" value="usergroup">Groupe</option>
+				</select>
+			</div>
+
+		</div>
 		<!-- modal depense-->
-		<div class="modalDepense" ng-repeat="depense in depenses"> 
+		<div class="modalDepense" ng-model="query" ng-repeat="depense in depenses  | filter:{Description: query} | orderBy:order"> 
 			<div class="DepenseLeft user">
 				<div class="user">{{usercolor}}</div>
-				<p class="userName" ng-controller="usersCtrl">{{depense.Payeur}}</p>
+				<p class="userName" ng-controller="usersCtrl">{{tabUsers[depense.Payeur]}}</p>
 				<div class="status">
 					<div class="stVert"></div>
 				</div>
 			</div>
 
 			<div class="DepenseRight">
-				<p class="date">20/08/2016</p>
+				<p class="date">{{depense.Date}}</p>
 				<p class="prix">{{depense.Montant +" &euro;"}}</p>
 			</div>
 			<p class="groupName">{{"Groupe: "+ depense.usergroup}}</p>
@@ -67,22 +110,24 @@
 				<img class="users" src="img/user.png">
 			</div>
 
+			<a href="" class="edit">Editer</a>
+
 		</div>
 		<!-- end modal depense-->
 	</div>
 
 
 	
-	<div class="containerUsers" ng-controller="usersCtrl"> 
-		<!-- modal user-->
+	<!--<div class="containerUsers" ng-controller="usersCtrl"> 
+		 
 		<div class="modalUser" ng-repeat="user in users">
 			<div class="userColor">{{user.usercolor}}</div>
 			<p class="userName">{{user.username}}</p>
 			<div class="stVert"></div>
 			<p class="groupName">{{"Groupe: "+ user.usergroup}}</p>
 		</div>
-			<!--end modal users-->
-	</div>
+			
+	</div> -->
 
 
 

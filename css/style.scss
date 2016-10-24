@@ -24,11 +24,17 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: 'OpenSans-Light';
+	a {
+		text-decoration:none;
+	}
+	a:hover {
+		text-decoration:none;
+	}
 
 	.initialModal{
-		min-height: 70px;
-		width : 50%;
-		margin:0 auto;
+		min-height: 90px;
+		width : 100%;
+		margin:0;
 		padding: 0 2em 0 2em!important;
 		background-color: rgb(255,99,74);
 
@@ -38,24 +44,22 @@ body{
 			font-size:2em;
 			line-height: 60px;
 			display:inline-block;
+			width : 10%;
 		}
 		.nav{
-			float:right;
+			right:40px;
 			display:inline-block;
 			margin-top:5px;
+			width : 80%;
 			
 
-			.modalFind,.modalNew,.modalFilter,.modalEtat{
+			.modalFind,.modalNew,.modalEtat,.modalConnect{
 				@include modalNav;
 			}
 
-			.modalFind:hover,.modalNew:hover,.modalFilter:hover,.modalEtat:hover{
+			.modalFind:hover,.modalNew:hover,.modalEtat:hover{
 				color:white;
 				background-color:rgba(255,255,255,0.2);
-			}
-
-			.modalFilter{
-				background-image: url('../img/filter.png');
 			}
 
 			.modalNew{
@@ -69,7 +73,7 @@ body{
 			.modalEtat{
 				background-image: url('../img/piggy-bank.png');
 			}
-			.filterBox,.newBox,.findBox{
+			.newBox,.findBox{
 				@include modalFond;
 			}
 		}	
@@ -78,6 +82,12 @@ body{
 		height:auto;
 		width:90%;
 		margin:5%;
+		
+		.containerFilter{
+			@include modalNav;
+			width:100%;
+			color:black;
+		}
 
 		.modalDepense,.modalUser{
 			
@@ -133,12 +143,16 @@ body{
 				float:left;
 			}
 			.description{
+				width:18.5vw;
 				float:left;
 				font-size:0.8em;
 			}
 			.concern{
 				.users{
 					@include userSmall;
+			}
+			.edit{
+				width:18.5vw;
 			}
 			}
 		}

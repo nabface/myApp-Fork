@@ -1,10 +1,17 @@
 var app = angular.module('MyComptaApp',['ngAnimate']);
+
+
 app.controller('usersCtrl', function ($scope,$http){
    $http({
       method:"GET",
       url:"json/users.json"
    }).then(function(response){
       $scope.users = response.data.records;
+      $scope.tabUsers = [];
+      for ($user in $scope.users) {
+        $scope.tabUsers[$scope.users[$user].Id] = $scope.users[$user].username;
+      }
+
    });
 });
 
@@ -18,8 +25,11 @@ app.controller('depensesCtrl', function ($scope,$http){
    });
 });
 
+
+
 //afiche les modales de la nav
 app.controller('dislplayNav', function($scope) {
+
     $scope.showFilter = false;
     $scope.showFilterFunc = function() {
         $scope.showFilter = !$scope.showFilter;
@@ -34,7 +44,6 @@ app.controller('dislplayNav', function($scope) {
     $scope.showFindFunc = function() {
         $scope.showFind = !$scope.showFind;
     }
-
 
 });
 
